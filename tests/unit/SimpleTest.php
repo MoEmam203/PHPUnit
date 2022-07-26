@@ -1,6 +1,8 @@
-<?php 
+<?php
 
-class SimpleTest extends \PHPUnit_Framework_TestCase {
+use PHPUnit\Framework\TestCase;
+
+class SimpleTest extends TestCase {
 
     public function testTrueAssertToTrue(){
         $this->assertTrue(true);
