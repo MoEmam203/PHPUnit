@@ -5,7 +5,8 @@ use PHPUnit\Framework\TestCase;
 
 class UserTest extends TestCase {
 
-    public function testThatWeCanGetFirstName()
+    /** @test */
+    public function that_we_can_get_first_name()
     {
         $user = new User;
 
@@ -14,7 +15,8 @@ class UserTest extends TestCase {
         $this->assertEquals($user->getFirstName(),'Mustafa');
     }
 
-    public function testThatWeCanGetLastName()
+    /** @test */
+    public function that_we_can_get_last_name()
     {
         $user = new User;
 
@@ -23,7 +25,8 @@ class UserTest extends TestCase {
         $this->assertEquals($user->getLastName(),'Emam');
     }
 
-    public function testWeCanGetFullName()
+    /** @test */
+    public function that_we_can_get_full_name()
     {
         $user = new User;
 
@@ -33,7 +36,8 @@ class UserTest extends TestCase {
         $this->assertEquals($user->getFullName(),'Mustafa Emam');
     }
 
-    public function testFirstNameAndLastNameAreTrim()
+    /** @test */
+    public function that_first_name_and_last_name_are_trimmed()
     {
         $user = new User;
 
@@ -44,7 +48,8 @@ class UserTest extends TestCase {
         $this->assertEquals($user->getLastName(),'Emam');
     }
 
-    public function testThatWeCanGetEmail(){
+    /** @test */
+    public function that_we_can_get_email(){
         $user = new User();
 
         $user->setEmail('mustafa@test.com');
@@ -52,8 +57,8 @@ class UserTest extends TestCase {
         $this->assertEquals($user->getEmail(),'mustafa@test.com');
     }
 
-    // get email variables
-    public function testThatEmailVariablesContainsCorrectValues()
+    /** @test */
+    public function that_email_variables_contains_correct_values()
     {
         // set first name , last name , email 
         $user = new User();
