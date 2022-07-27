@@ -4,14 +4,7 @@ namespace App\Calculator;
 
 use App\Calculator\Exceptions\NoOPerandsException;
 
-class Addition implements OperationsInterface{
-    
-    protected $operands = [];
-    public function setOperands(array $operands)
-    {
-        $this->operands = $operands;
-    }
-
+class Addition extends OperationAbstract implements OperationsInterface{
     public function calculate()
     {
         if(count($this->operands) === 0){
